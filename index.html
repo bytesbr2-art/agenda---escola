@@ -1,1 +1,128 @@
-<!DOCTYPE html><html lang='pt-BR'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width, initial-scale=1.0'><title>Minha Agenda Dashboard</title><link rel='stylesheet' href='style.css'></head><body><div class='dashboard'><aside><h2>📋 Minha Agenda</h2><nav><a onclick="mostrarTela('inicio')">🏠 Início</a><a onclick="mostrarTela('tarefas')">📝 Tarefas</a><a onclick="mostrarTela('config')">⚙ Configuração</a></nav></aside><section class='conteudo'><div id='inicio' class='tela ativa'><h1>👋 Bem-vindo!</h1><p>Este é meu primeiro Dashboard Web.</p></div><div id='tarefas' class='tela'><h1>Minhas tarefas</h1><input type='text' id='tarefa' placeholder='Digite uma tarefa'><button onclick='adicionarTarefa()'>➕ Adicionar tarefa</button><button onclick='limparTarefas()'>🗑 Limpar tarefas</button><ul id='listaTarefas'></ul><p id='contador'>Total de tarefas: 0</p></div><div id='config' class='tela'><h1>Configuração</h1><label>Tema:</label><select id='tema' onchange='alterarTema()'><option value='claro'>Claro</option><option value='escuro'>Escuro</option></select></div></section></div><footer>Desenvolvido por Hiury Gabriel</footer><script src='script.js'></script></body></html>
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Agenda Digital</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <aside class="menu-lateral">
+
+            <h2>📋 Minha Agenda</h2>
+
+            <nav>
+
+                <button onclick="mostrarTela('inicio')">
+                    🏠 Início
+                </button>
+
+                <button onclick="mostrarTela('tarefas')">
+                    📝 Tarefas
+                </button>
+
+                <button onclick="mostrarTela('configuracoes')">
+                    ⚙ Configurações
+                </button>
+
+            </nav>
+
+        </aside>
+
+
+        <main class="conteudo">
+
+            <!-- INÍCIO -->
+
+            <section id="inicio" class="tela ativa">
+
+                <h1>👋 Bem-vindo!</h1>
+
+                <h2>Minha Agenda Digital</h2>
+
+                <p>
+                    Organize suas tarefas de forma simples e eficiente.
+                </p>
+
+                <img src="img.jpeg"
+                    alt="Imagem Inicial"
+                    class="imagem-inicial">
+
+            </section>
+
+
+            <!-- TAREFAS -->
+
+            <section id="tarefas" class="tela">
+
+                <h1>📝 Minhas Tarefas</h1>
+
+                <input
+                    type="text"
+                    id="inputTarefa"
+                    placeholder="Digite uma tarefa">
+
+                <div class="botoes">
+
+                    <button onclick="adicionarTarefa()">
+                        ➕ Adicionar
+                    </button>
+
+                    <button onclick="limparTarefas()">
+                        🗑 Limpar
+                    </button>
+
+                </div>
+
+                <ul id="listaTarefas"></ul>
+
+                <p id="contador">
+                    Total de tarefas: 0
+                </p>
+
+            </section>
+
+
+            <!-- CONFIGURAÇÕES -->
+
+            <section id="configuracoes" class="tela">
+
+                <h1>⚙ Configurações</h1>
+
+                <label for="tema">
+                    Escolha o tema:
+                </label>
+
+                <select id="tema" onchange="alterarTema()">
+
+                    <option value="claro">
+                        Tema Claro
+                    </option>
+
+                    <option value="escuro">
+                        Tema Escuro
+                    </option>
+
+                </select>
+
+            </section>
+
+        </main>
+
+    </div>
+
+    <footer>
+        Desenvolvido por Hiury Gabriel
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
