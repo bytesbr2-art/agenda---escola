@@ -179,7 +179,7 @@ footer {
 body.escuro {
     color: #ffffff;
 
-    background-image: url("img2.jpg");
+    background-image: url("img2.png");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
